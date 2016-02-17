@@ -5,7 +5,7 @@ Throttle lock is a limited use case library that obfuscates the complexity of sc
 Throttle lock is working for my own use cases, but be forwarned! It contains a lot of synchronization logic in a short amount of code, it could do anything from stealing your lunch money to race locking a production server. Be careful!!!!!
 
 Obligatory example:
-```golang
+```go
 	// run one million routines, only 100 at a time.
 	tl := NewThrottleLock(100, 1000000)
 	for i := 0; i < 1000000; i++ {
